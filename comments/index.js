@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 let commentsById = {};
 
 app.get('/posts/:id/comments',(req,res) => {
-    res.status(400).send(commentsById[req.params.id] || []);
+    res.status(201).send(commentsById[req.params.id] || []);
 })
 
 app.post('/posts/:id/comments',(req,res) => {
